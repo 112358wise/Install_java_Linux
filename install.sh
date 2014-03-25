@@ -44,8 +44,8 @@ $INFORMATION Found 32bits \n
 $INFORMATION Downloading Java 32bits"
   wget "http://javadl.sun.com/webapps/download/AutoDL?BundleId=75250"  -O java.tar.gz
 else
-  echo "$INFORMATION Found 64bits"
-  echo "$INFORMATION Downloading Java 64bits"
+  echo -e "$INFORMATION Found 64bits"
+  echo -e "$INFORMATION Downloading Java 64bits"
   wget "http://javadl.sun.com/webapps/download/AutoDL?BundleId=75252"  -O java.tar.gz
 fi
 
@@ -53,7 +53,7 @@ fi
 cd /usr/java/
 tar zxvf /tmp/java.tar.gz
 
-  echo "
+  echo -e "
 $WITHOUTPROBLEM Congradulations Java successfully installed"
 
 # settings browser plugin
@@ -82,10 +82,10 @@ case $ANSWER in
   if [ "$ARCH" = "32" ]
   then
     ln -s /usr/java/jre*/lib/i386/libnpjp2.so /usr/lib/mozilla/plugins/
-    echo "$WITHOUTPROBLEM Plugin successfully installed"
+    echo -e "$WITHOUTPROBLEM Plugin successfully installed"
   else 
     ln -s /usr/java/jre*/lib/amd64/libnpjp2.so /usr/lib/mozilla/plugins
-    echo "$WITHOUTPROBLEM Plugin successfully installed"
+    echo -e "$WITHOUTPROBLEM Plugin successfully installed"
   fi
 ;;
 2)
@@ -104,17 +104,17 @@ case $ANSWER in
   if [ "$ARCH" = "32" ]
   then
     ln -s /usr/java/jre*/lib/i386/libnpjp2.so /opt/google/chrome/plugins/
-    echo "$WITHOUTPROBLEM Plugin successfully installed"
+    echo -e "$WITHOUTPROBLEM Plugin successfully installed"
   else 
     ln -s /usr/java/jre*/lib/amd64/libnpjp2.so /opt/google/chrome/plugins/
-    echo "$WITHOUTPROBLEM Plugin successfully installed"
+    echo -e "$WITHOUTPROBLEM Plugin successfully installed"
   fi
 ;;
 q)
-  echo "$INFORMATION Closing"
+  echo -e "$INFORMATION Closing"
 ;;
 *)
-  echo "$PROBLEM unrecognized option. Try again"
+  echo -e "$PROBLEM unrecognized option. Try again"
   continue
 ;;
 esac
