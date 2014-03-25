@@ -22,3 +22,5 @@ cd Install_java_Linux
 chmod +x install_java.sh
 ./install_java.sh
 ```
+
+tested on Debian , Ubuntu , CentOS and RedHat.
